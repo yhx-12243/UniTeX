@@ -107,8 +107,8 @@ const stableFixed: Fixed = {
   urcorner: '┐',
   llcorner: '└',
   lrcorner: '┘',
-  llbracket: '[[',
-  rlbracket: ']]',
+  llbracket: '⟦',
+  rrbracket: '⟧',
   lBrace: '{[',
   rBrace: ']}',
 
