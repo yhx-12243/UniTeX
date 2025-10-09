@@ -114,7 +114,7 @@ typeface('mathbb', alphabets(...'𝔸𝔹ℂ', ...series('𝔻', '𝔾'),
 )
 typeface('mathfrak', alphabets(...series('𝕬', '𝖟')))
 typeface('mathscr', alphabets(...'𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ', ...series('𝒩', '𝒬'),
-  'ℛ', ...series('𝒮', '𝒹'), 'ℯ', '𝒻', 'g', ...series('𝒽', '𝓃'),
+  'ℛ', ...series('𝒮', '𝒹'), 'ℯ', '𝒻', 'ℊ', ...series('𝒽', '𝓃'),
   'ℴ', ...series('𝓅', '𝓏'))
 )
 typeface('mathcal', Unicode.typeface["mathscr"]); // remark
@@ -150,98 +150,110 @@ Unicode.typefaceNames = Object.keys(Unicode.typeface);
 
 // supscript & subscript
 
-Unicode.supscripts[0] = '⁰';
-Unicode.supscripts[1] = '¹';
-Unicode.supscripts[2] = '²';
-Unicode.supscripts[3] = '³'; // u00b3
-Unicode.supscripts[4] = '⁴';
-Unicode.supscripts[5] = '⁵';
-Unicode.supscripts[6] = '⁶';
-Unicode.supscripts[7] = '⁷';
-Unicode.supscripts[8] = '⁸';
-Unicode.supscripts[9] = '⁹';
+Object.assign(Unicode.supscripts, {
+  '0': '⁰',
+  '1': '¹',
+  '2': '²',
+  '3': '³', // u00b3
+  '4': '⁴',
+  '5': '⁵',
+  '6': '⁶',
+  '7': '⁷',
+  '8': '⁸',
+  '9': '⁹',
 
-Unicode.supscripts.a = 'ᵃ';
-Unicode.supscripts.b = 'ᵇ';
-Unicode.supscripts.c = 'ᶜ';
-Unicode.supscripts.d = 'ᵈ';
-Unicode.supscripts.e = 'ᵉ';
-Unicode.supscripts.f = 'ᶠ';
-Unicode.supscripts.g = 'ᵍ';
-Unicode.supscripts.h = 'ʰ';
-// Unicode.supscripts.i = '^i'
-Unicode.supscripts.j = 'ʲ';
-Unicode.supscripts.k = 'ᵏ';
-Unicode.supscripts.l = 'ˡ';
-Unicode.supscripts.m = 'ᵐ';
-Unicode.supscripts.n = 'ⁿ'; // u207f
-Unicode.supscripts.o = 'ᵒ';
-Unicode.supscripts.p = 'ᵖ';
-Unicode.supscripts.r = 'ʳ';
-Unicode.supscripts.s = 'ˢ';
-Unicode.supscripts.t = 'ᵗ';
-Unicode.supscripts.u = 'ᵘ';
-Unicode.supscripts.v = 'ᵛ';
-Unicode.supscripts.w = 'ʷ';
-Unicode.supscripts.x = 'ˣ'; // u02e3
-Unicode.supscripts.y = 'ʸ';
-Unicode.supscripts.z = 'ᶻ';
+  'a': 'ᵃ',
+  'b': 'ᵇ',
+  'c': 'ᶜ',
+  'd': 'ᵈ',
+  'e': 'ᵉ',
+  'f': 'ᶠ',
+  'g': 'ᵍ',
+  'h': 'ʰ',
+  // 'i': '^i',
+  'j': 'ʲ',
+  'k': 'ᵏ',
+  'l': 'ˡ',
+  'm': 'ᵐ',
+  'n': 'ⁿ', // u207f
+  'o': 'ᵒ',
+  'p': 'ᵖ',
+  'r': 'ʳ',
+  's': 'ˢ',
+  't': 'ᵗ',
+  'u': 'ᵘ',
+  'v': 'ᵛ',
+  'w': 'ʷ',
+  'x': 'ˣ', // u02e3
+  'y': 'ʸ',
+  'z': 'ᶻ',
 
-Unicode.supscripts['+'] = '⁺';
-Unicode.supscripts['-'] = '⁻';
-Unicode.supscripts['='] = '⁼';
-Unicode.supscripts['('] = '⁽';
-Unicode.supscripts[')'] = '⁾';
+  '+': '⁺',
+  '-': '⁻',
+  '=': '⁼',
+  '(': '⁽',
+  ')': '⁾',
 
-// Unicode: Phonetic Extensions
-Unicode.supscripts.A = 'ᴬ';
-// Unicode.supscripts. = 'ᴭ'
-Unicode.supscripts.B = 'ᴮ';
-// Unicode.supscripts. = 'ᴯ';
-Unicode.supscripts.D = 'ᴰ';
-Unicode.supscripts.E = 'ᴱ';
-// Unicode.supscripts. = 'ᴲ';
-Unicode.supscripts.G = 'ᴳ';
-Unicode.supscripts.H = 'ᴴ';
-Unicode.supscripts.I = 'ᴵ';
-Unicode.supscripts.J = 'ᴶ';
-Unicode.supscripts.K = 'ᴷ';
-Unicode.supscripts.L = 'ᴸ';
-Unicode.supscripts.M = 'ᴹ';
-Unicode.supscripts.N = 'ᴺ';
-// Unicode.supscripts. = 'ᴻ';
-Unicode.supscripts['α'] = 'ᵅ';
-Unicode.supscripts['′'] = '′';
+  // Unicode: Phonetic Extensions
+  'A': 'ᴬ',
+  'Æ': 'ᴭ',
+  'B': 'ᴮ',
+  'ᴃ': 'ᴯ',
+  'D': 'ᴰ',
+  'E': 'ᴱ',
+  'Ǝ': 'ᴲ',
+  'G': 'ᴳ',
+  'H': 'ᴴ',
+  'I': 'ᴵ',
+  'J': 'ᴶ',
+  'K': 'ᴷ',
+  'L': 'ᴸ',
+  'M': 'ᴹ',
+  'N': 'ᴺ',
+  'ᴎ': 'ᴻ',
+  'α': 'ᵅ',
+  '′': '′',
+});
 
 
 // subscripts
 
-['₀', '₁', '₂', '₃', '₄', '₅', '₆', '₇', '₈', '₉']
-  .forEach((x, i) => Unicode.subscripts[i] = x);
+Object.assign(Unicode.subscripts, {
+  '0': '₀',
+  '1': '₁',
+  '2': '₂',
+  '3': '₃',
+  '4': '₄',
+  '5': '₅',
+  '6': '₆',
+  '7': '₇',
+  '8': '₈',
+  '9': '₉',
 
-Unicode.subscripts.a = 'ₐ';
-Unicode.subscripts.e = 'ₑ';
-Unicode.subscripts.h = 'ₕ';
-Unicode.subscripts.i = 'ᵢ'; // u1d62
-Unicode.subscripts.j = 'ⱼ';
-Unicode.subscripts.k = 'ₖ';
-Unicode.subscripts.l = 'ₗ';
-Unicode.subscripts.m = 'ₘ';
-Unicode.subscripts.n = 'ₙ';
-Unicode.subscripts.o = 'ₒ';
-Unicode.subscripts.p = 'ₚ'; // u209a
-Unicode.subscripts.r = 'ᵣ';
-Unicode.subscripts.s = 'ₛ';
-Unicode.subscripts.t = 'ₜ';
-Unicode.subscripts.u = 'ᵤ';
-Unicode.subscripts.v = 'ᵥ';
-Unicode.subscripts.x = 'ₓ';
+  'a': 'ₐ',
+  'e': 'ₑ',
+  'h': 'ₕ',
+  'i': 'ᵢ', // u1d62
+  'j': 'ⱼ',
+  'k': 'ₖ',
+  'l': 'ₗ',
+  'm': 'ₘ',
+  'n': 'ₙ',
+  'o': 'ₒ',
+  'p': 'ₚ', // u209a
+  'r': 'ᵣ',
+  's': 'ₛ',
+  't': 'ₜ',
+  'u': 'ᵤ',
+  'v': 'ᵥ',
+  'x': 'ₓ',
 
-Unicode.subscripts['+'] = '₊';
-Unicode.subscripts['-'] = '₋';
-Unicode.subscripts['='] = '₌';
-Unicode.subscripts['('] = '₍';
-Unicode.subscripts[')'] = '₎';
+  '+': '₊',
+  '-': '₋',
+  '=': '₌',
+  '(': '₍',
+  ')': '₎',
+});
 
 export default Unicode;
 
