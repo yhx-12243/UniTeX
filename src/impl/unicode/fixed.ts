@@ -65,7 +65,7 @@ const stableFixed: Fixed = {
   varpi: 'ϖ',
   varrho: 'ϱ',
   varsigma: 'ς',
-  varphi: 'φ',
+  varphi: 'ϕ',
   digamma: 'ϝ',
 
   /* Combined Operatorname */
