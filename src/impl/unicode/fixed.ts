@@ -21,6 +21,9 @@ const stableFixed: Fixed = {
   Complex: Unicode.typeface.mathbb.C,
   Bbbk: Unicode.typeface.mathbb.k,
 
+  Re: Unicode.typeface.mathfrak.R,
+  Im: Unicode.typeface.mathfrak.I,
+
   TeX: 'TᴇX',
   LaTeX: 'LᴬTᴇX',
 
@@ -1209,8 +1212,8 @@ const stableFixed: Fixed = {
   weierp: '℘',
   turnediota: '℩',
   Angstrom: 'Å',
-  imath: '𝚤',
-  jmath: '𝚥',
+  imath: 'ı',
+  jmath: 'ȷ',
   textpilcrow: '¶',
   textborn: '*',
   textdied: '†',
