@@ -299,6 +299,7 @@ Object.assign(Unicode.supscripts, {
   'n': 'ⁿ', // u207f
   'o': 'ᵒ',
   'p': 'ᵖ',
+  'q': '𐞥',
   'r': 'ʳ',
   's': 'ˢ',
   't': 'ᵗ',
@@ -316,6 +317,10 @@ Object.assign(Unicode.supscripts, {
   ')': '⁾',
 
   // Unicode: Phonetic Extensions
+  'ɦ': 'ʱ',
+  'ɹ': 'ʴ',
+  'ɻ': 'ʵ',
+  'ʁ': 'ʶ',
   'A': 'ᴬ',
   'Æ': 'ᴭ',
   'B': 'ᴮ',
@@ -346,6 +351,7 @@ Object.assign(Unicode.supscripts, {
   'W': 'ᵂ',
   'ɐ': 'ᵄ',
   'ɑ': 'ᵅ',
+  'α': 'ᵅ', // https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts#cite_note-somefonts-15
   'ᴂ': 'ᵆ',
   'ə': 'ᵊ',
   'ɛ': 'ᵋ',
@@ -391,6 +397,7 @@ Object.assign(Unicode.supscripts, {
   'ʉ': 'ᶶ',
   'ʊ': 'ᶷ',
   'ᴜ': 'ᶸ',
+  'υ': 'ᶸ', // https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts#cite_note-somefonts-15
   'ʋ': 'ᶹ',
   'ʌ': 'ᶺ',
   'ʐ': 'ᶼ',
@@ -417,6 +424,7 @@ Object.assign(Unicode.subscripts, {
   '9': '₉',
 
   'a': 'ₐ',
+  'c': '𞁞', // See https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts#Latin,_Greek,_Cyrillic,_and_IPA_tables.
   'e': 'ₑ',
   'h': 'ₕ',
   'i': 'ᵢ', // u1d62
