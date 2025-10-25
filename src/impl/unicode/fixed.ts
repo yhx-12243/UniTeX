@@ -65,7 +65,7 @@ const stableFixed: Fixed = {
   varpi: 'ϖ',
   varrho: 'ϱ',
   varsigma: 'ς',
-  varphi: 'ϕ',
+  varphi: 'φ',
   digamma: 'ϝ',
 
   /* Combined Operatorname */
@@ -1712,6 +1712,7 @@ const greeks = [
 ]
 greeks.forEach((x, i) => stableFixed[x] = Unicode.greeks[i]);
 stableFixed.epsilon = 'ϵ';
+stableFixed.phi = 'ϕ';
 
 export const stableValue = (key: string): string => stableFixed[key] as string;
 
