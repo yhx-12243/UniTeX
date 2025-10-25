@@ -33,7 +33,7 @@ function standardTest() {
   // bar
   assert.strictEqual(
     translate(String.raw`\text{Gal}(\bar a/a) \rarr \text{Aut}(E[m])`),
-    "Gal(ā/a) → Aut(E[m])"
+    "Gal(ā/a) → Aut(E[m])"
   );
 
   // matrix
