@@ -1623,7 +1623,6 @@ const stableFixed: Fixed = {
 
   /* Spacing */
   ',': ' ',
-  '>': ' ',
   ':': ' ',
   ';': ' '.repeat(2),
   '!': '', // stub
@@ -1645,6 +1644,8 @@ const stableFixed: Fixed = {
   ']': ']',
   '{': '{',
   '}': '}',
+  '<': '⟨',
+  '>': '⟩',
   '%': '%',
   '\\': '\n',
   'newline': '\n',

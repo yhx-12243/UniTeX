@@ -88,8 +88,8 @@ const Unicode = {
 
   typefaceNames: [] as string[],
 
-  suprender: (s: string) => Unicode.render_if_forall(Unicode["supscripts"], s, x => '^' + Proper.brace(x)),
-  subrender: (s: string) => Unicode.render_if_forall(Unicode["subscripts"], s, x => '_' + Proper.brace(x)),
+  suprender: (s: string) => Unicode.render_if_forall(Unicode["supscripts"], s, x => '^' + Proper.paren(x)),
+  subrender: (s: string) => Unicode.render_if_forall(Unicode["subscripts"], s, x => '_' + Proper.paren(x)),
 
   supscripts: {} as SMap,
   subscripts: {} as SMap,

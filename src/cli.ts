@@ -80,7 +80,7 @@ export const createTranslator = <Block>({
   const value = loose(single.or(brace_wrap(of(() => text))));
   const optional = bracket_wrap(value); // [value]
 
-  const symbol_macros = includes(...'|,>:;!()[]{}_%\\`^~=."\'');
+  const symbol_macros = includes(...'|,<>:;!()[]{}_%\\`^~=."\'');
 
   const macro_name = letters.or(symbol_macros)
   const macro_head = backslash.move(macro_name);
