@@ -30,7 +30,8 @@ export const translate = createTranslator<Block>({
   displayBlock: (a: Block) => a.display,
   subscriptHandler: Unicode.subrender,
   supscriptHandler: Unicode.suprender,
-  typefaceHandler: Unicode.render_if_exists
+  typefaceHandler: Unicode.render_if_exists,
+  finalizer: (s: string) => Unicode.recover_placeholders(s).normalize('NFC'),
 });
 
 export {

@@ -54,6 +54,7 @@ export const createTranslator = <Block>({
   subscriptHandler,
   supscriptHandler,
   typefaceHandler,
+  finalizer,
   inlineMathHandler = (s) => s,
 }: {
   fixed?: Fixed,
@@ -72,6 +73,7 @@ export const createTranslator = <Block>({
   subscriptHandler: (s: string) => string,
   supscriptHandler: (s: string) => string,
   typefaceHandler: (s: string, typeface: string) => string,
+  finalizer: (s: string) => string,
   inlineMathHandler?: (s: string) => string,
 }) => {
   const single = digit.or(letter).or(valuesymbol).or(of(() => fixed_macro));
@@ -138,7 +140,7 @@ export const createTranslator = <Block>({
     .or(environ)
     .or(unary_macro)
     .or(binary_macro)
-    .or(value)
+    .or(value);
 
   const italic_render = (s: string) => typefaceHandler(s, "mathit");
   // Unicode.render_if_exists(s, 'mathit');
@@ -216,7 +218,7 @@ export const createTranslator = <Block>({
 
   const translate = (s: string) =>
     (x => x.type != "error" ? x.res : "")
-      (text.parse(s.toIterator()));
+      (text.map(finalizer).parse(s.toIterator()));
 
   return translate;
 };
