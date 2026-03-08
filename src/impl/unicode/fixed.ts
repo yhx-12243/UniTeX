@@ -114,7 +114,7 @@ const stableFixed: Fixed = {
   llcorner: '└',
   lrcorner: '┘',
   llbracket: '⟦',
-  rlbracket: '⟧',
+  rrbracket: '⟧',
   lBrace: '⦃',
   rBrace: '⦄',
   lbrbrak: '❲',
